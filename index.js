@@ -83,8 +83,5 @@ const translateMail = (data, callback) => {
 };
 
 exports.handler = function (event, context, callback) {
-  const base64body = JSON.stringify(event.body);
-  const data = JSON.parse(Buffer.from(base64body, 'base64').toString('utf8'));
-
-  translateMail(data, callback);
+  translateMail(JSON.parse(event.body), callback);
 };

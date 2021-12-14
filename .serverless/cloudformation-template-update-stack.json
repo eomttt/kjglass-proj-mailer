@@ -161,7 +161,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/kjglass-mailer/dev/1639455557893-2021-12-14T04:19:17.893Z/kjglass-mailer.zip"
+          "S3Key": "serverless/kjglass-mailer/dev/1639456931511-2021-12-14T04:42:11.511Z/kjglass-mailer.zip"
         },
         "Handler": "index.handler",
         "Runtime": "nodejs12.x",
@@ -179,14 +179,14 @@
         "EmailLogGroup"
       ]
     },
-    "EmailLambdaVersion1cirOlnLuHgHei4KOEBu1VGgZgn9GUbqfXeZSfTkDKU": {
+    "EmailLambdaVersiont0OQY9b8SZDfpSnj3DLZcFKxelgwD85QNKT2Z93U": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "EmailLambdaFunction"
         },
-        "CodeSha256": "cta5eO6gUK3u+eAbq3stCAsuW3O+Ib9G/8lRpt1cQFI="
+        "CodeSha256": "XOPnmKWFIiWIVJzCy+Agn57xMK+K9Q2S3rxXKRJ6P9E="
       }
     },
     "ApiGatewayRestApi": {
@@ -307,7 +307,7 @@
         "EmailLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1639455556998": {
+    "ApiGatewayDeployment1639456930458": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -370,7 +370,7 @@
     "EmailLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "EmailLambdaVersion1cirOlnLuHgHei4KOEBu1VGgZgn9GUbqfXeZSfTkDKU"
+        "Ref": "EmailLambdaVersiont0OQY9b8SZDfpSnj3DLZcFKxelgwD85QNKT2Z93U"
       },
       "Export": {
         "Name": "sls-kjglass-mailer-dev-EmailLambdaFunctionQualifiedArn"
