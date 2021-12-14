@@ -1,0 +1,18 @@
+service: kjglass-mailer
+
+frameworkVersion: '2'
+provider:
+  lambdaHashingVersion: 20201221
+  name: aws
+  runtime: nodejs12.x
+  profile: serverless
+  region: ap-northeast-2
+
+functions:
+  email:
+    handler: index.handler
+    events:
+      - http:
+          path: send-email
+          method: POST
+          cors: true
