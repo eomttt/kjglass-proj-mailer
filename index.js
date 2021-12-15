@@ -64,6 +64,9 @@ const translateMail = (data, callback) => {
     if (err) {
       const response = {
         statusCode: 500,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
         body: JSON.stringify({
           error: error.message,
         }),
@@ -74,6 +77,9 @@ const translateMail = (data, callback) => {
 
     const response = {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
       body: JSON.stringify({
         message: `Email sent successfully!!!`,
       }),
