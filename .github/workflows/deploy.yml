@@ -5,6 +5,12 @@ on:
     branches:
       - main
 
+env:
+  SENDER_EMAIL: ${{ github.event.number }}
+  MAIL_SERVICE: ${{ github.head_ref }}
+  MAIL_USER: pr${{ github.event.number }}
+  MAIL_PASSWORD: ${{ github.event.number }}
+
 jobs:
   deploy:
     name: deploy
@@ -19,11 +25,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - name: Set env
-        run: echo "SENDER_EMAIL=Naver" >> $GITHUB_ENV
-          echo "MAIL_SERVICE=Naver" >> $GITHUB_ENV
-          echo "MAIL_USER=Naver" >> $GITHUB_ENV
-          echo "MAIL_PASSWORD=Naver" >> $GITHUB_ENV
       - name: serverless deploy
         uses: serverless/github-action@master
         with:
