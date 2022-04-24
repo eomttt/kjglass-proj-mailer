@@ -29,7 +29,7 @@ const translateMail = (data, callback) => {
   });
 
   const mailOptions = {
-    from: "FROM < admin@kjglass.co.kr >",
+    from: `FROM < ${process.env.MAIL_USER} >`,
     to: SEND_TO_MAIL,
     subject: "견적 문의",
     html: `<div><b>제목: ${title}</b></div>
