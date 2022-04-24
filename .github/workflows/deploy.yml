@@ -21,6 +21,9 @@ jobs:
       - run: npm install
       - name: Set env
         run: echo "SENDER_EMAIL=Naver" >> $GITHUB_ENV
+          echo "MAIL_SERVICE=Naver" >> $GITHUB_ENV
+          echo "MAIL_USER=Naver" >> $GITHUB_ENV
+          echo "MAIL_PASSWORD=Naver" >> $GITHUB_ENV
       - name: serverless deploy
         uses: serverless/github-action@master
         with:
