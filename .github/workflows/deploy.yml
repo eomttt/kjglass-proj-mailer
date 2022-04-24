@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
+      - name: Set env
+        run: echo "SENDER_EMAIL=Naver" >> $GITHUB_ENV
       - name: serverless deploy
         uses: serverless/github-action@master
         with:
