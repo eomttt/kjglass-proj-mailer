@@ -1,10 +1,9 @@
 service: kjglass-mailer
 
-frameworkVersion: '2'
 provider:
   lambdaHashingVersion: 20201221
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   profile: serverless
   region: ap-northeast-2
 

@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+import nodemailer from "nodemailer";
 
 const SEND_TO_MAIL = process.env.SENDER_EMAIL;
 
@@ -29,9 +29,9 @@ const translateMail = (data, callback) => {
   });
 
   const mailOptions = {
-    from: 'FROM < hyunt0413@naver.com >',
+    from: "FROM < hyunt0413@naver.com >",
     to: SEND_TO_MAIL,
-    subject: '견적 문의',
+    subject: "견적 문의",
     html: `<div><b>제목: ${title}</b></div>
              <br>
              <div>회사: ${company}</div>
@@ -65,10 +65,10 @@ const translateMail = (data, callback) => {
       const response = {
         statusCode: 500,
         headers: {
-          'Access-Control-Allow-Origin': '*',
+          "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
-          error: error.message,
+          error: err.message,
         }),
       };
       callback(null, response);
@@ -78,7 +78,7 @@ const translateMail = (data, callback) => {
     const response = {
       statusCode: 200,
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
         message: `Email sent successfully!!!`,
