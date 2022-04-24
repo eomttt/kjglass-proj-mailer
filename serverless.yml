@@ -3,11 +3,7 @@ service: kjglass-mailer
 provider:
   name: aws
   runtime: nodejs14.x
-  # you can overwrite defaults here
-  stage: dev
   region: ap-northeast-2
-  deploymentBucket:
-    name: kjglass-mailer
 
 functions:
   email:
