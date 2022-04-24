@@ -1,11 +1,13 @@
 service: kjglass-mailer
 
 provider:
-  lambdaHashingVersion: 20201221
   name: aws
   runtime: nodejs14.x
-  profile: serverless
+  # you can overwrite defaults here
+  stage: dev
   region: ap-northeast-2
+  deploymentBucket:
+    name: kjglass-mailer
 
 functions:
   email:
