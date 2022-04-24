@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-const SEND_TO_MAIL = process.env.SENDER_EMAIL;
+const SEND_TO_MAIL = process.env.SEND_TO_MAIL;
 
 const transporter = nodemailer.createTransport({
   service: process.env.MAIL_SERVICE,
@@ -29,7 +29,7 @@ const translateMail = (data, callback) => {
   });
 
   const mailOptions = {
-    from: "FROM < hyunt0413@naver.com >",
+    from: "FROM < admin@kjglass.co.kr >",
     to: SEND_TO_MAIL,
     subject: "견적 문의",
     html: `<div><b>제목: ${title}</b></div>

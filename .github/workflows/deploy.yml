@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+  SEND_TO_MAIL: ${{ secrets.SEND_TO_MAIL }}
   MAIL_SERVICE: ${{ secrets.MAIL_SERVICE }}
   MAIL_USER: ${{ secrets.MAIL_USER }}
   MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}

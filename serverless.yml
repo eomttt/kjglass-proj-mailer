@@ -9,7 +9,7 @@ functions:
   email:
     handler: index.handler
     environment:
-      SENDER_EMAIL: ${env:SENDER_EMAIL}
+      SEND_TO_MAIL: ${env:SEND_TO_MAIL}
       MAIL_SERVICE: ${env:MAIL_SERVICE}
       MAIL_USER: ${env:MAIL_USER}
       MAIL_PASSWORD: ${env:MAIL_PASSWORD}
