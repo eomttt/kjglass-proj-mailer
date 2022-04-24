@@ -6,10 +6,10 @@ on:
       - main
 
 env:
-  SENDER_EMAIL: SENDER_EMAIL
-  MAIL_SERVICE: MAIL_SERVICE
-  MAIL_USER: MAIL_USER
-  MAIL_PASSWORD: MAIL_PASSWORD
+  SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+  MAIL_SERVICE: ${{ secrets.MAIL_SERVICE }}
+  MAIL_USER: ${{ secrets.MAIL_USER }}
+  MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
 
 jobs:
   deploy:
