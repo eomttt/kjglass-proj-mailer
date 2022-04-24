@@ -6,10 +6,10 @@ on:
       - main
 
 env:
-  SENDER_EMAIL: ${{ github.event.number }}
-  MAIL_SERVICE: ${{ github.head_ref }}
-  MAIL_USER: pr${{ github.event.number }}
-  MAIL_PASSWORD: ${{ github.event.number }}
+  SENDER_EMAIL: SENDER_EMAIL
+  MAIL_SERVICE: MAIL_SERVICE
+  MAIL_USER: MAIL_USER
+  MAIL_PASSWORD: MAIL_PASSWORD
 
 jobs:
   deploy:
