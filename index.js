@@ -88,6 +88,6 @@ const translateMail = (data, callback) => {
   });
 };
 
-exports.handler = function (event, context, callback) {
+export const handler = (event, context, callback) => {
   translateMail(JSON.parse(event.body), callback);
 };
