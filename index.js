@@ -32,10 +32,14 @@ const translateMail = (data, callback) => {
     from: `FROM < ${process.env.MAIL_USER} >`,
     to: SEND_TO_MAIL,
     subject: "견적 문의",
-    html: `<div><b style="color:orange;font-size:20px">주의: !!이메일에 있는 이메일 값을 복사해서 답장해주세요!!</b>
+    html: `<div><b style="color:orange;font-size:20px">주의: !!답장 해야할 이메일에 있는 이메일 값을 복사해서 답장해주세요!!</b>
             <br />
             <br />
             <b>제목: ${title}</b>
+             <br>
+             <br>
+             <b>답장 해야할 이메일: ${email}</b>
+             <br>
              <br>
              <div>회사: ${company}</div>
              <br>
@@ -43,8 +47,7 @@ const translateMail = (data, callback) => {
              <br>
              <div>담당자: ${name}</div>
              <br>
-             <div>이메일: ${email}</div>
-             <br>
+
              <div>전화번호: ${number}</div>
              <br>
              <div>팩스: ${faxNum}</div>
