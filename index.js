@@ -47,7 +47,6 @@ const translateMail = (data, callback) => {
              <br>
              <div>담당자: ${name}</div>
              <br>
-
              <div>전화번호: ${number}</div>
              <br>
              <div>팩스: ${faxNum}</div>
