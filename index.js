@@ -29,10 +29,13 @@ const translateMail = (data, callback) => {
   });
 
   const mailOptions = {
-    from: `FROM < ${process.env.MAIL_USER} >`,
+    from: `FROM <div ${process.env.MAIL_USER} >`,
     to: SEND_TO_MAIL,
     subject: "견적 문의",
-    html: `<div><b>제목: ${title}</b></div>
+    html: `<div><b style="color:orange;font-size:20px">주의: !!이메일에 있는 이메일 값을 복사해서 답장해주세요!!</b>
+            <br />
+            <br />
+            <b>제목: ${title}</b>
              <br>
              <div>회사: ${company}</div>
              <br>
@@ -57,7 +60,7 @@ const translateMail = (data, callback) => {
              <div><b>기타 화학 제품군</b></div>
              <div>${expendableItems.map(
                (expendableItem) => expendableItem
-             )}</div>`,
+             )}</div></div>`,
   };
 
   transporter.sendMail(mailOptions, (err, res) => {
